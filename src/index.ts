@@ -121,7 +121,7 @@ const app = api.createApp();
 export default app;
 
 // For local development
-if (require.main === module) {
+if (process.env.NODE_ENV !== 'production') {
   const port = process.env.PORT || 3001;
   app.listen(port, () => {
     console.log(`YouTube Music API running on port ${port}`);
