@@ -1,0 +1,33 @@
+{
+  "name": "youtube-music-server",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "youtube-music-server": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@distube/ytdl-core": "^4.16.12",
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "googleapis": "^160.0.0",
+    "puppeteer": "^24.22.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
+}
