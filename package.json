@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@distube/ytdl-core": "^4.16.12",
-    "@modelcontextprotocol/sdk": "0.6.0",
+    "@modelcontextprotocol/sdk": "1.26.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "googleapis": "^160.0.0",
